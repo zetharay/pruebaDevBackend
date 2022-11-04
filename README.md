@@ -12,7 +12,7 @@ Instrucciones para compilar
     2.4 Instalar jest supertest  $ npm i -D jest supertest
 3. Si se quiere utilizar un excel diferente sustituir el actual y debe llevar el mismo nombre 'query_result_2022.xlsx' ya que este esta hardcodeado. 
 4. Arrancar el servidor de express $ npm run dev
-5. Consumir api desde postman Por el metodo get ó post pasandole en el body la siguiente estructura:
+5. Consumir api desde postman Por el metodo get ó post 'http://localhost:4000/api/consumos' pasandole en el body la siguiente estructura:
     {
         "date" :"2022-10-14",
         "period" : "weekly"
@@ -21,7 +21,7 @@ Instrucciones para compilar
 5.1 Tambien se le debe pasar una key en el header de la petición Content-Type : application/json.
 6 CURL:
 
-curl --location --request POST 'http://localhost:4000/' \
+curl --location --request POST 'http://localhost:4000/api/consumos' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "date" :"2022-10-14",
